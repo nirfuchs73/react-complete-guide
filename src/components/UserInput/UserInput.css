@@ -1,0 +1,6 @@
+.UserInput {
+  display: flex;
+  justify-content: flex-start;
+  width: 300px;
+  margin-left: 20px;
+}

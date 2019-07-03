@@ -1,20 +1,42 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import PropTypes from 'prop-types';
 import './App.css';
 
+import UserInput from './components/UserInput';
+import UserOutput from './components/UserOutput';
+
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                {/* <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>Edit <code>src/App.js</code> and save to reload.</p>
-                    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-                </header> */}
-                <h1>Hi, I'm a React App</h1>
-            </div>
-        );
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: 'nirfuchs',
     }
+  }
+
+  static propTypes = {
+    username: PropTypes.string,
+  }
+
+  onUsernameChange = (e) => {
+    this.setState({ username: e.target.value }, () => {
+      console.log('username', this.state.username);
+    });
+  }
+
+  render() {
+    let props = {
+      username: this.state.username,
+      onUsernameChange: this.onUsernameChange,
+    }
+
+    return (
+      <div className="App">
+        <h1>Hi, I'm a React App</h1>
+        <UserInput {...props} />
+        <UserOutput {...props} />
+      </div>
+    );
+  }
 }
 
 export default App;
