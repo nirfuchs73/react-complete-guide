@@ -9,24 +9,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'nirfuchs',
+      userName: 'nirfuchs',
     }
   }
 
   static propTypes = {
-    username: PropTypes.string,
+    userName: PropTypes.string,
   }
 
-  onUsernameChange = (e) => {
-    this.setState({ username: e.target.value }, () => {
-      console.log('username', this.state.username);
+  onUserNameChange = (event) => {
+    this.setState({ userName: event.target.value }, () => {
+      console.log('username', this.state.userName);
     });
   }
 
   render() {
     let props = {
-      username: this.state.username,
-      onUsernameChange: this.onUsernameChange,
+      userName: this.state.userName,
+      onUserNameChange: this.onUserNameChange,
     }
 
     return (

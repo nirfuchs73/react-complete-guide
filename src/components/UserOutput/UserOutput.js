@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './UserOutput.css';
 
-class UserOutput extends Component {
-  state = {}
-  render() {
-    const {
-      username,
-    } = this.props;
+const UserOutput = (props) => {
+  const {
+    userName,
+  } = props;
 
-    return (
-      <div className="UserOutput">
-        <p>Username: {username}</p>
-      </div>
-    );
-  }
+  return (
+    <div className="UserOutput">
+      <p>Username: {userName}</p>
+    </div>
+  );
 }
 
 export default UserOutput;
