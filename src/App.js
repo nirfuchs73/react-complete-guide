@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { StyleRoot } from 'radium';
 import './App.css';
 
 // import UserInput from './components/UserInput';
@@ -62,19 +63,21 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <h1>Hi, I'm a React App</h1>
-        {/* <UserInput {...props} /> */}
-        {/* <UserOutput {...props} /> */}
-        {/* {showOutput && <UserOutput {...props} />} */}
-        <input type="text"
-          value={text}
-          onChange={this.onTextChange}
-        />
-        {/* <p>{text}</p> */}
-        <Validation {...props} />
-        {charList}
-      </div>
+      <StyleRoot>
+        <div className="App">
+          <h1>Hi, I'm a React App</h1>
+          {/* <UserInput {...props} /> */}
+          {/* <UserOutput {...props} /> */}
+          {/* {showOutput && <UserOutput {...props} />} */}
+          <input type="text"
+            value={text}
+            onChange={this.onTextChange}
+          />
+          {/* <p>{text}</p> */}
+          <Validation {...props} />
+          {charList}
+        </div>
+      </StyleRoot>
     );
   }
 }

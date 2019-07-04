@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 
 import './Char.css';
 
@@ -8,12 +9,20 @@ const Char = (props) => {
     onCharClick,
   } = props;
 
+  const style = {
+    ':hover': {
+      backgroundColor: 'green',
+    },
+    '@media (max-width: 500px)': {
+      backgroundColor: 'red'
+    }
+  }
 
   return (
-    <div className="Char" onClick={onCharClick}>
+    <div className="Char" onClick={onCharClick} style={style}>
       {char}
     </div>
   );
 }
 
-export default Char;
+export default Radium(Char);
