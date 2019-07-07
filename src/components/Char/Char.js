@@ -14,7 +14,8 @@ const Char = (props) => {
       backgroundColor: 'green',
     },
     '@media (max-width: 500px)': {
-      backgroundColor: 'red'
+      backgroundColor: 'blue',
+      color: 'white',
     }
   }
 
