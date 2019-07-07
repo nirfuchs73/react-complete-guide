@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleRoot } from 'radium';
+// import { StyleRoot } from 'radium';
 import './App.css';
 
 // import UserInput from './components/UserInput';
@@ -63,7 +63,7 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
+      // <StyleRoot>
         <div className="App">
           <h1>Hi, I'm a React App</h1>
           {/* <UserInput {...props} /> */}
@@ -77,7 +77,7 @@ class App extends Component {
           <Validation {...props} />
           {charList}
         </div>
-      </StyleRoot>
+      // </StyleRoot>
     );
   }
 }
